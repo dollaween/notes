@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+var fn = function(progress) {
+  ${1}
+  if (progress >= 1) {
+    ${0}
+  }
+};
+AnimHandler.init(fn, this.duration, this.timing);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ah</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+for (let ${2:i} = ${1:Things}.length - 1; ${2:i} >= 0; ${2:i}--) {
+  ${0:${1:Things}[${2:i}]}
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>jfor</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+animate = (options) ->
+	start = performance.now()
+	requestAnimationFrame(measure = (time) ->
+		timeFraction = (time - start) / options.duration
+		progress = options.timing(timeFraction)
+		if progress < 0
+			progress = 0
+		if progress > 1
+			progress = 1
+		options.draw(progress)
+		if timeFraction < 1
+			requestAnimationFrame(measure)
+		)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fraf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.coffee</scope>
+</snippet>

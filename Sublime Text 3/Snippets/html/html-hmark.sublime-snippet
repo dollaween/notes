@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width'>
+		<title>${1}</title>
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+
+		<header id="header">
+			${0}
+		</header>
+
+
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hmark</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

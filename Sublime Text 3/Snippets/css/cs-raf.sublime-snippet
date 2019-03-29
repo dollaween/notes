@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+animate(
+	duration: ${1:300}
+	timing: (timeFraction) ->
+		timeFraction
+	draw: (progress) ->
+		${2}
+	)
+${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>raf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.coffee</scope>
+</snippet>

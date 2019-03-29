@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+// Валидация String
+// match: [/7/, 'Телефон должен содержать цифру 7']
+// minlength: [7, 'Слишком короткий телефонный номер']
+// maxlength: [17, 'Слишком длинный телефонный номер']
+// enum: ['Астана', 'Новгород', 'Воркута']
+
+// Валидация Number
+// min: [10, "Число должно быть больше 10"]
+// max: [99, "Число должно быть меньше 99"]
+
+// Методы String
+// uppercase, lowercase, trim
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>mnghelp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

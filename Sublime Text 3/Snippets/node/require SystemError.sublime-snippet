@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+SystemError ${0}= require('error/system').SystemError${1}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>reqsyser</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

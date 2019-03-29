@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[
+var mongoose = require('libs/mongoose'),
+    Schema = mongoose.Schema;
+
+
+
+
+
+var schema = new Schema({
+  ${2:title}: {
+    type: String,
+    trim: true,
+    default: ""
+  }${0}
+}, {
+  timestamps: true
+});
+
+
+
+
+
+let validator = (record) => {
+  error = record.validateSync();
+  return error;
+};
+
+
+
+
+
+exports.${1:Test} = mongoose.model('${1:Test}', schema);
+exports.validator = validator;
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>mng</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

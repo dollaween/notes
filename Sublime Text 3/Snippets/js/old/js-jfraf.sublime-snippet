@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+function animate(options) {
+	var start = performance.now();
+	requestAnimationFrame(function animate(time){
+		var timeFraction = (time - start) / options.duration;
+		var progress = options.timing(timeFraction);
+		if (progress < 0) {
+			progress = 0;
+		}
+		if (progress > 1) {
+			progress = 1;
+		}
+		options.draw(progress);
+		if (timeFraction < 1) {
+			requestAnimationFrame(animate);
+		}
+	});
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>jfraf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

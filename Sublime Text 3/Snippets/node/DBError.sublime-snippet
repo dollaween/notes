@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+if (err) return new DBError(err)
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>dber</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

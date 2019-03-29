@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+@import 'normalize'
+@import 'mixins'
+@import 'nib'
+
+// COLORS
+// ==================================
+c-white = #fff
+c-dark = #222
+
+// GENERAL
+// ==================================
+html,body
+	background c-white
+	color c-dark
+	font-family Tahoma, sans-serif
+	font-size 16px
+	height 100%
+	line-height 22px
+
+// HEADER
+// ==================================
+#header
+	height 100%
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	smark<tabTrigger>smark</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

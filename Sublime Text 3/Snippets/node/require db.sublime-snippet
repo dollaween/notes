@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+_db ${0}= require('libs/db')${1}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>reqdb</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

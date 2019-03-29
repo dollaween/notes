@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+class ${1:Name} extends Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      ${0}
+    )
+  }
+
+}
+
+
+
+export default ${1:Name}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
