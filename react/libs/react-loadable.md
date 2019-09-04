@@ -1,6 +1,8 @@
 # React Loadable
 Разбивает бандл на части. Вместо загрузки всего приложения, позволяет загружать только те части, которые используются в данный момент.
 
+[Пример preloader на react-loadable](https://github.com/dollaween/notes/blob/master/react/Preload.md)
+
 ### App.js
 ``` javascript
 import React from 'react';
