@@ -5,7 +5,7 @@
 ``` javascript
 import React, { Component } from 'react';
 import Loadable from 'react-loadable';
-import Loading from '../../core/components/Loading/Loading';
+import Loading from './components/Loading';
 
 const LoadableBar = Loadable({
     loader: () => import('./components/Bar'),
