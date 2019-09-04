@@ -1,6 +1,8 @@
 # Code Splitting
 
 
+
+
 ### App.js
 ```javascript
 import React from 'react';
@@ -21,7 +23,9 @@ function App() {
 ```
 
 
-`Splitter.js`
+
+
+### Splitter.js
 ```javascript
 import React, { Component } from "react";
 
@@ -56,6 +60,8 @@ export default function splitter(importComponent) {
 
 
 
+
+### Home.js
 ```javascript
 import React, { Component } from 'react';
 
