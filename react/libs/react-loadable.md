@@ -46,7 +46,7 @@ const Loading = props => {
             </div>
         );
     } else if (props.pastDelay) {
-        return <div>Loading...</div>;
+        return <div>Загрузка...</div>;
     } else {
         return null;
     }
