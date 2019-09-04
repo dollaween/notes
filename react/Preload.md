@@ -12,7 +12,7 @@ const LoadableBar = Loadable({
     loading: Loading,
 });
 
-class About extends Component {
+class MyComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,7 +31,6 @@ class About extends Component {
     render() {
         return (
             <div>
-                <h4>About</h4>
                 <button
                     onClick={this.onClick}
                     onMouseOver={this.onMouseOver}>
@@ -43,7 +42,7 @@ class About extends Component {
     }
 }
 
-export default About;
+export default MyComponent;
 ```
 
 
