@@ -21,6 +21,7 @@ function App() {
 ```
 
 
+`Splitter.js`
 ```javascript
 import React, { Component } from "react";
 
