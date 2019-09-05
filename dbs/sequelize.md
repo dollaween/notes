@@ -27,9 +27,16 @@ module.exports = (sequelize, DataTypes) => {
             },
         },
     }, {
-        sequelize,
         ...defaultModelSettings,
-        timestaps: true,
+        // ...options
     });
 };
+```
+
+
+### Options
+``` javascript
+{
+    timestaps: true,
+}
 ```
