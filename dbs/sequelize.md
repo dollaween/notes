@@ -1,6 +1,7 @@
 # Sequelize
 
 - [Валидация](https://sequelize.org/master/manual/models-definition.html#validations)
+- [Индексы](https://sequelize.org/master/manual/models-definition.html#indexes)
 
 ### Пример модели
 ``` javascript
@@ -87,5 +88,12 @@ module.exports = (sequelize, DataTypes) => {
     validate: {},       // срабатывает после всех других валидаций
     
     paranoid: true,     // не удаляет записи из базы, а добавляет им аттрибут deletedAt
+    
+    underscored: true,  // устанаваливает snake cased нотацию для атрибутов
+    
+    freezeTableName: true,
+    tableName: 'my_very_custom_table_name',
+    version: true,
+    sequelize,          // Sequelize instance
 }
 ```
