@@ -2,6 +2,10 @@
 
 - [Валидация](https://sequelize.org/master/manual/models-definition.html#validations)
 - [Индексы](https://sequelize.org/master/manual/models-definition.html#indexes)
+- [Список хуков](https://github.com/sequelize/sequelize/blob/master/lib/hooks.js#L7)
+- [Операторы сравнения](https://sequelize.org/master/manual/querying.html#operators)
+- [Сортировка](https://sequelize.org/master/manual/querying.html#ordering)
+- [Ассоциативные запросы](https://sequelize.org/master/manual/querying.html#relations---associations)
 
 ### Пример модели
 ``` javascript
