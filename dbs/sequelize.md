@@ -38,6 +38,17 @@ module.exports = (sequelize, DataTypes) => {
 ```
 
 
+### Fields
+``` javascript
+{
+    allowNull: false,
+    autoIncrement: true,
+    defaultValue: null,
+    unique: true,
+}
+```
+
+
 ### Options
 ``` javascript
 {
