@@ -1,5 +1,7 @@
 # Sequelize
 
+- (Валидация)[https://sequelize.org/master/manual/models-definition.html#validations]
+
 ### Пример модели
 ``` javascript
 import { defaultModelSettings } from '../constants/models';
