@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         fullName() {
             return this.firstname + ' ' + this.lastname;
         }
-    }
+    },
     
     setterMethods: {
         fullName(val) {
@@ -82,6 +82,8 @@ module.exports = (sequelize, DataTypes) => {
             this.setDataValue('firstname', names.slice(0, -1).join(' '));
             this.setDataValue('lastname', names.slice(-1).join(' '));
         }
-    }
+    },
+    
+    validate: {}, // срабатывает после всех других валидаций
 }
 ```
