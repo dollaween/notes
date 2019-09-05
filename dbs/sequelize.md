@@ -1,6 +1,6 @@
 # Sequelize
 
-- (Валидация)[https://sequelize.org/master/manual/models-definition.html#validations]
+- [Валидация](https://sequelize.org/master/manual/models-definition.html#validations)
 
 ### Пример модели
 ``` javascript
