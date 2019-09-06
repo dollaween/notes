@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
 
 
 
-### Model 2
+## Model 2
 ``` javascript
 module.exports = (sequelize, DataTypes) => {
     const Tag = sequelize.define('Tag', {
