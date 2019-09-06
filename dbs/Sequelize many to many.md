@@ -45,7 +45,150 @@ module.exports = (sequelize, DataTypes) => {
 
 
 
-### Controller
-``` javascript
 
+### Initialize
+``` javascript
+import fs from 'fs';
+import path from 'path';
+import { Sequelize } from 'sequelize';
+import config from '../../config/database.json';
+
+const basename = path.basename(__filename);
+const db = {};
+
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+
+fs
+    .readdirSync(__dirname)
+    .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
+    .forEach((file) => {
+        const model = sequelize.import(path.join(__dirname, file));
+        db[model.name] = model;
+    });
+
+Object.keys(db).forEach((modelName) => {
+    if (db[modelName].associate) {
+        db[modelName].associate(db);
+    }
+});
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;
+
+```
+
+
+
+
+
+### Controller getOn
+Достаем один project со всеми tags, связанными с ним.
+В project будет добавлено свойство tags.
+``` javascript
+exports.get = (req, res, next) => {
+    const { id } = req.query;
+
+    if (!id)
+        return next('Request should contain project ID');
+
+    const where = { id };
+
+    Project
+        .findOne({
+            where,
+            include: [{
+                as: 'tags',
+                model: Tag,
+                required: false,
+                through: { attributes: [] },
+            }]
+        })
+        .then((result) => res.json(result) )
+        .catch(err => next(err));
+}
+```
+
+
+
+
+
+### Controller post
+Заносим project в базу данных. Связываем project и tags.
+``` javascript
+exports.post = async (req, res, next) => {
+    try {
+        const project = req.body;
+
+        if (project.id && Number(project.id) > 0)
+            return next('Project ID must be 0 or not present');
+
+        let createdProject = await Project.create(project);
+
+        let tags = await modelHelper.getList(Tag, project.tags, 'id');
+        createdProject.setTags(tags);
+
+        return res.status(200).json(createdProject);
+
+    } catch (err) {
+        return next(err);
+    }
+}
+```
+
+
+
+
+
+### modelHelper
+``` javascript
+const getList = async (model, arr, field) => {
+    let data = null;
+
+    if (arr) {
+        let values = arr.reduce( (acc, cur) => {
+            acc.push(cur[field]);
+            return acc;
+        }, []);
+
+        let where = {};
+        where[field] = values;
+
+        data = await model.findAll({ where });
+    }
+
+    return data;
+}
+
+
+exports.getList = getList;
+```
+
+
+
+
+
+### Controller put
+``` javascript
+exports.put = async (req, res, next) => {
+    try {
+        const { id, ...project } = req.body;
+
+        if (id === undefined) return next('Project ID is not present');
+        if (Number(id) <= 0) return next('Project ID must be > 0');
+
+        await Project.update(project, { where: { id } });
+        let updatedProject = await Project.findOne({ where: { id } });
+
+        let tags = await modelHelper.getList(Tag, project.tags, 'id');
+        updatedProject.setTags(tags);
+
+        return res.status(200).json();
+
+    } catch (err) {
+        return next(err);
+    }
+}
 ```
