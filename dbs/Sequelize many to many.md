@@ -1,5 +1,6 @@
 # Sequelize Many to Many
 Пример ассоциации таблиц Project и Tag.
+Методы getTags, setTags, addTags, addTag не прикрепляются к модели. Их можно получить после того, как достали запись из базы данных, например через findOne или create.
 
 ### Model 1
 ``` javascript
