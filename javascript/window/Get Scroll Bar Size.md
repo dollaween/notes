@@ -1,4 +1,4 @@
-# Get Scroll Bar Size
+# Get scroll bar size
 
 ``` javascript
 let cached;
