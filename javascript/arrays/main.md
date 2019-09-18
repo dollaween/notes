@@ -179,11 +179,11 @@ turtles.reduce((acc, cur) => {
   const x = acc.find(e => e.id === cur.id)
   return !x ? acc.concat([cur]) : acc
 }, [])
-[
-  { id: 1, name: 'Leo' },
-  { id: 2, name: 'Raf' },
-  { id: 4, name: 'Splinter' }
-]
+  // [
+  //    { id: 1, name: 'Leo' },
+  //    { id: 2, name: 'Raf' },
+  //    { id: 4, name: 'Splinter' }
+  // ]
 
 let seen = new Set()
 turtles.filter(e => {
