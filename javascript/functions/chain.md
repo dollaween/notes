@@ -23,7 +23,8 @@ function fn1() { console.log(1) }
 function fn2() { console.log(2) }
 function fn3() { console.log(3) }
 
-createChainedFunction(fn2, fn1, fn3)
+let chain = createChainedFunction(fn2, fn1, fn3)
+chain()
     // 2
     // 1
     // 3
