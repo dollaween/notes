@@ -1,6 +1,6 @@
 # Main
 
-Making the Array-like Objects become Arrays
+Преобразование Array-like объектов в Arrays
 ``` javascript
 let args = [].slice.call(arguments)
 ```
