@@ -2,7 +2,13 @@
 
 
 
-## Tools
+## Создание
+Создание массива
+``` javascript
+new Array(45)
+  // [empty × 45]
+```
+
 Создание копии массива
 ``` javascript
 array.slice()
