@@ -105,5 +105,173 @@ arr.includes('two')
 
 
 
+
+
+
+
+
+
+## МЕТОДЫ ИЗМЕНЕНИЯ
+
+### Array.fill()
+Заполняет все элементы массива от начального до конечного индексов одним значением
 ``` javascript
+Array.fill(value, start, end)
+
+arr = [1, 2, 3, 4]
+arr.fill(0)
+    // [0, 0, 0, 0]
+```
+
+
+
+### Array.pop()
+Удаляет последний элемент из массива и возвращает его
+``` javascript
+Array.pop()
+```
+
+
+
+### Array.push()
+Добавляет один или более элементов в конец массива и возвращает новую длину массива
+``` javascript
+Array.push()
+```
+
+
+
+### Array.reverse()
+Переворачивает порядок элементов в массиве — первый элемент становится последним, а последний — первым
+``` javascript
+Array.reverse()
+```
+
+
+
+### Array.shift()
+Удаляет первый элемент из массива и возвращает его
+``` javascript
+Array.shift()
+```
+
+
+
+### Array.sort()
+Сортирует элементы массива на месте и возвращает отсортированный массив
+``` javascript
+Array.sort()
+```
+
+
+
+### Array.splice()
+Добавляет и/или удаляет элементы из массива
+``` javascript
+arr.splice(start, deleteCount, item1, item2...)
+
+arr = ['Johnny', 'they', 'are', 'on', 'the', 'trees']
+
+arr.splice(0, 1, 'Carl')
+    // [ 'Carl', 'they', 'are', 'on', 'the', 'trees' ]
+
+arr.splice(3, 0, 'aliens')
+    // [ 'Johnny', 'they', 'are', 'aliens', 'on', 'the', 'trees' ]
+```
+
+
+
+### Array.unshift()
+Добавляет один или более элементов в начало массива и возвращает новую длину массива
+``` javascript
+Array.unshift()
+```
+
+
+
+
+
+
+
+
+
+
+## Методы доступа
+
+### Array.concat()
+Возвращает новый массив, состоящий из данного массива, соединённого с другим массивом и/или значением (списком массивов/значений)
+``` javascript
+Array.concat()
+```
+
+
+
+### Array.from()
+Создаёт новый экземпляр Array из массивоподобного или итерируемого объекта
+``` javascript
+Array.from(iterable)
+
+Array.from('some')                // [s, o, m, e]
+Array.from(100)                   // []
+
+// Второй аргумент — функция map
+Array.from('some', (value, index) => value.toUpperCase())
+    // [ 'S', 'O', 'M', 'E' ]
+
+// Можно передать длину массива объектом со свойством length
+Array.from({length: 5}, (value, index) => index)
+    // [ 0, 1, 2, 3, 4 ]
+```
+
+
+
+### Array.join()
+Объединяет все элементы массива в строку
+``` javascript
+Array.join()
+```
+
+
+
+### Array.slice()
+Извлекает диапазон значений и возвращает его в виде нового массива
+``` javascript
+Array.slice()
+```
+
+
+
+### Array.toString()
+Возвращает строковое представление массива и его элементов. Переопределяет метод Object.prototype.toString()
+``` javascript
+Array.toString()
+```
+
+
+
+### Array.toLocaleString()
+Возвращает локализованное строковое представление массива и его элементов. Переопределяет метод Object.prototype.toLocaleString()
+``` javascript
+Array.toLocaleString()
+```
+
+
+
+### Array.indexOf()
+Возвращает первый (наименьший) индекс элемента внутри массива, равный указанному значению; или -1, если значение не найдено
+``` javascript
+arr.indexOf(value, fromIndex)
+
+arr = ['hasta', 'la', 'vista', 'baby']
+
+arr.indexOf('vista')              // 2
+arr.indexOf('wrong')              // -1
+```
+
+
+
+### Array.lastIndexOf()
+Возвращает последний (наибольший) индекс элемента внутри массива, равный указанному значению; или -1, если значение не найдено
+``` javascript
+Array.lastIndexOf()
 ```
