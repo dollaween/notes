@@ -3,7 +3,7 @@
 Проходится по переданному массиву из объектов `arr`, сравнивает поле `field` с нужным значением `target`. Если значения не совпадают, и у объекта есть потомки `children` — повторяет процедуру с ними. Возвращает элемент массива, либо `null`.
 
 ### Code
-``` javasript
+``` javascript
 const dfs = (arr, target, field = 'id', children = 'children') => {
     let result = null;
 
