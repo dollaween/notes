@@ -4,32 +4,21 @@
 
 ### Code
 ``` javascript
-const dfs = (arr, target, field = 'id', children = 'children') => {
-    let result = null;
-
-    function recursion(obj, target, field, children) {
-        if (obj[field] === target) {
-            return obj;
-        }
-        if (obj[children]) {
-            for (let item of obj[children]) {
-                let check = recursion(item, target, field, children);
-                if (check) {
-                    return check;
+function dfs(arr, target, key = 'id', children = 'children') {
+    if (arr.length > 0) {
+        for (let obj of arr) {
+            if (obj[key] === target) {
+                return obj;
+            } else if (obj[children]) {
+                let found = dfs(obj[children], target, key, children);
+                if (found !== null) {
+                    return found;
                 }
             }
         }
-        return null;
     }
-
-    for (let obj of arr) {
-        result = recursion(obj, target, field, children);
-        if (result)
-            break;
-    }
-
-    return result;
-};
+    return null;
+}
 ```
 
 
