@@ -3,6 +3,7 @@
 - Алиасы
 - Атрибуты .gitattributes
 - Игнорирование .gitignore
+- Удаление
 
 
 # Конфиг
@@ -43,3 +44,9 @@ git config --global core.excludesFile ~/.gitignore
 .idea
 ```
 
+
+# Удаление
+```
+## Удаляет файл из индекса, но оставляет в проекте
+git rm -r --cached <file>
+```
