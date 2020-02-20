@@ -30,15 +30,15 @@ git config --global alias.c 'config --global'
 теперь `git s` будет означать `git status`
 
 
-# Глобальное игнорирование``
+# Глобальное игнорирование
 ```
 ## Создание глобального игнор файла
 git config --global core.excludesFile ~/.gitignore
 ```
 
-`.gitignore`
-
 Добавляем глобальное игнорирование `.idea` (файл webstorm'а)
+
+`.gitignore`
 ```
 .idea
 ```
