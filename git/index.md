@@ -58,20 +58,34 @@ git rm -r --cached <file>
 ## Отмена всех изменений и возврат к начальному состоянию коммита
 git checkout -f
 
+## Откат изменений указанных файлов
+git checkout HEAD index.html
+
 ## Сливает указанную ветку с текущей
 git cherry-pick <branch or commit name>
 
 ## Берет из указанного коммита только указанный файл
 git checkout <commit_name> <file_name>
 git checkout e5e6 index.html
+
+## Вернуться на предыдущий чекаут
+git checkout -
 ```
 
 
-## Коммиты
+# Коммиты
 ```
 ## Удаляет из индекса указанный файл
 git reset <file_name>
 ```
 
+
+# Log
+```
+## Выводит информацию о коммитах указанной ветки
+git log <branch_name> --oneline
+
+git show <branch_name or commit_name>
+```
 
 
