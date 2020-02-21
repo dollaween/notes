@@ -4,6 +4,7 @@
 - Атрибуты .gitattributes
 - Игнорирование .gitignore
 - Удаление
+- Ветки
 
 
 # Конфиг
@@ -50,3 +51,27 @@ git config --global core.excludesFile ~/.gitignore
 ## Удаляет файл из индекса, но оставляет в проекте
 git rm -r --cached <file>
 ```
+
+
+# Ветки
+```
+## Отмена всех изменений и возврат к начальному состоянию коммита
+git checkout -f
+
+## Сливает указанную ветку с текущей
+git cherry-pick <branch or commit name>
+
+## Берет из указанного коммита только указанный файл
+git checkout <commit_name> <file_name>
+git checkout e5e6 index.html
+```
+
+
+## Коммиты
+```
+## Удаляет из индекса указанный файл
+git reset <file_name>
+```
+
+
+
