@@ -71,6 +71,9 @@ git checkout e5e6 index.html
 
 ## Вернуться на предыдущий чекаут
 git checkout -
+
+## Удаление ветки
+git branch -D <branch_name>
 ```
 
 
