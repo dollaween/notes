@@ -21,6 +21,7 @@ git config --remove-section user
 Мой конфиг
 ```
 git config --global core.autocrlf true
+git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"
 ```
 
 
