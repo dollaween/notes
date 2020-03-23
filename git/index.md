@@ -90,6 +90,9 @@ git reset <file_name>
 git log <branch_name> --oneline
 
 git show <branch_name or commit_name>
+
+## Все незапушенные коммиты
+git log --branches --not --remotes
 ```
 
 
